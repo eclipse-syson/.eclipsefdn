@@ -49,7 +49,7 @@ orgs.newOrg('eclipse-syson') {
           ],
           deployment_branch_policy: "selected",
         },
-      ],      
+      ],
     },
     orgs.newRepo('syson') {
       allow_squash_merge: false,
@@ -62,9 +62,10 @@ orgs.newOrg('eclipse-syson') {
       },
     },
     orgs.newRepo('syson-website') {
-      allow_merge_commit: true,
+      allow_squash_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      has_wiki: false,
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
