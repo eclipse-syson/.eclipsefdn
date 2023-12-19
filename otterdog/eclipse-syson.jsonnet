@@ -55,11 +55,20 @@ orgs.newOrg('eclipse-syson') {
       allow_squash_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      description: "SysON: web-based graphical modelers for SysMLv2",
+      has_discussions: true,
       has_wiki: false,
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: 1,
+          requires_linear_history: true,
+          requires_strict_status_checks: true,
+        },
+      ],
     },
     orgs.newRepo('syson-website') {
       allow_squash_merge: false,
