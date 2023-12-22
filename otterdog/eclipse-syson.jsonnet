@@ -11,6 +11,7 @@ orgs.newOrg('eclipse-syson') {
     web_commit_signoff_required: false,
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
+      default_workflow_permissions: "write",
     },
   },
   secrets+: [
@@ -60,6 +61,7 @@ orgs.newOrg('eclipse-syson') {
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
+        default_workflow_permissions: "write",
       },
       branch_protection_rules: [
         orgs.newBranchProtectionRule('main') {
