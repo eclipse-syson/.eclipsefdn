@@ -57,6 +57,7 @@ orgs.newOrg('eclipse-syson') {
       description: "SysON: web-based graphical modelers for SysMLv2",
       has_discussions: true,
       has_wiki: false,
+      homepage: "https://mbse-syson.org",
       web_commit_signoff_required: false,
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
@@ -73,6 +74,9 @@ orgs.newOrg('eclipse-syson') {
       allow_squash_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "main",
+      gh_pages_source_path: "/",
       has_wiki: false,
       web_commit_signoff_required: false,
       workflows+: {
