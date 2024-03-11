@@ -38,9 +38,6 @@ orgs.newOrg('eclipse-syson') {
       gh_pages_source_branch: "main",
       gh_pages_source_path: "/",
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -54,14 +51,11 @@ orgs.newOrg('eclipse-syson') {
       allow_squash_merge: false,
       allow_update_branch: false,
       delete_branch_on_merge: false,
-      description: "SysON: web-based graphical modelers for SysMLv2",
+      description: "SysON: web-based graphical modelers for SysMLv2. Please visit https://mbse-syson.org and contact Obeo https://www.obeosoft.com/en/contact for more details!",
       has_discussions: true,
       has_wiki: false,
       homepage: "https://mbse-syson.org",
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       branch_protection_rules: [
         orgs.newBranchProtectionRule('main') {
           required_approving_review_count: 0,
@@ -79,9 +73,14 @@ orgs.newOrg('eclipse-syson') {
       gh_pages_source_path: "/",
       has_wiki: false,
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main"
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
     },
   ],
 }
