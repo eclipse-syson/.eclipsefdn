@@ -2,4 +2,4 @@
 *             @eclipse-syson/eclipsefdn-releng
 
 # Otterdog related configurations are also owned by the security team.
-/otterdog/**  @eclipse-syson/eclipsefdn-security @eclipse-syson/eclipsefdn-releng
+/otterdog/**  @eclipse-syson/eclipsefdn-security
