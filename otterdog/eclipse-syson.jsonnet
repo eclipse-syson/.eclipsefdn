@@ -24,6 +24,12 @@ orgs.newOrg('eclipse-syson') {
       value: "********",
       visibility: "selected",
     },
+    orgs.newOrgSecret('ORG_DOCKER_HUB_TOKEN') {
+      value: "pass:bots/modeling.syson/docker.com/api-token",
+    },
+    orgs.newOrgSecret('ORG_DOCKER_HUB_USER') {
+      value: "pass:bots/modeling.syson/docker.com/username",
+    },
   ],
   _repositories+:: [
     orgs.newRepo('eclipse-syson.github.io') {
