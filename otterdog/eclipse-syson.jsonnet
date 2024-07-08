@@ -48,6 +48,7 @@ orgs.newOrg('eclipse-syson') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "SysON: web-based graphical modelers for SysMLv2. Please visit https://mbse-syson.org and contact Obeo https://www.obeosoft.com/en/contact for more details!",
+      gh_pages_build_type: "workflow",
       has_discussions: true,
       has_wiki: false,
       homepage: "https://mbse-syson.org",
