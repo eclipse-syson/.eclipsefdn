@@ -66,6 +66,14 @@ orgs.newOrg('eclipse-syson') {
           requires_strict_status_checks: true,
         },
       ],
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main"
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
     },
     orgs.newRepo('syson-website') {
       allow_squash_merge: false,
