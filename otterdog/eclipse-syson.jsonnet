@@ -69,7 +69,8 @@ orgs.newOrg('eclipse-syson') {
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
-            "main"
+            "main",
+            "v*"
           ],
           deployment_branch_policy: "selected",
         },
