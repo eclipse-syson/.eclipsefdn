@@ -10,20 +10,6 @@ orgs.newOrg('eclipse-syson') {
     },
   },
   secrets+: [
-    orgs.newOrgSecret('AWS_ACCESS_KEY_ID') {
-      selected_repositories+: [
-        "syson"
-      ],
-      value: "********",
-      visibility: "selected",
-    },
-    orgs.newOrgSecret('AWS_SECRET_ACCESS_KEY') {
-      selected_repositories+: [
-        "syson"
-      ],
-      value: "********",
-      visibility: "selected",
-    },
     orgs.newOrgSecret('ORG_DOCKER_HUB_TOKEN') {
       value: "pass:bots/modeling.syson/docker.com/api-token",
     },
