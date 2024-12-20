@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-syson') {
+orgs.newOrg('modeling.syson', 'eclipse-syson') {
   settings+: {
     description: "",
     name: "Eclipse SysON",
